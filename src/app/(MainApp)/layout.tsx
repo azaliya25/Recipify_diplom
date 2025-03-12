@@ -34,7 +34,7 @@ export default function MainAppLayout({
       />
 
       <button
-        className="fixed top-12 right-28 flex flex-col items-center justify-center space-y-1 p-2 z-50 focus:border-none"
+        className="fixed top-12 right-20 flex flex-col items-center justify-center space-y-1 p-2 z-50 mobile:right-28 focus:border-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span

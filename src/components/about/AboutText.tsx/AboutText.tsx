@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutText = () => {
     return (
-        <div className="flex flex-col justify-center items-center absolute px-9">
+        <div className="flex flex-col justify-center items-center absolute px-9 ">
             <div className="max-h-80 ">
                 <div className="absolute hidden -left-6 tablet:block w-1 top-1/2  bg-[#DABF94] max-h-full h-full rounded-md "></div>
                 <div className="flex flex-col justify-center items-center w-full gap-24 max-w-[900px] tablet:max-w-[1000px]">

@@ -154,3 +154,20 @@ input[type="search"]::-webkit-search-results-decoration {
   animation: burgerPulse3 1.3s ease-in-out infinite 0.2s;
   transform-origin: right;
 }
+
+@keyframes typing {
+  0% { content: ""; }
+  33% { content: "."; }
+  66% { content: ".."; }
+  100% { content: "..."; }
+}
+
+.dot-typing::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #DABF94;
+  border-radius: 50%;
+  animation: typing 1.5s infinite steps(1);
+}

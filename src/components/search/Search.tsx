@@ -4,7 +4,7 @@ import SearchText from "@/components/search/SearchText/SearchText.tsx";
 export default function Search() {
     return (
         <div className="flex justify-center items-center w-full my-[200px] mx-8">
-            <div className="flex justify-center items-center top-0 w-full max-h-[620px] gap-64 ">
+            <div className="flex justify-center items-center absolute bottom-8 w-full h-full  max-h-[620px] z-10">
                 {/* <Image
                     className="w-full h-full"
                     src="/grid.png"

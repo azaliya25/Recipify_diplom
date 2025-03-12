@@ -1,54 +1,54 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-interface Recipe {
-  id: number;
-  user_id: number;
-  Ingredients: string;
-  Recipe: string;
-  created_at: string;
-}
+// interface Recipe {
+//   id: number;
+//   user_id: number;
+//   Ingredients: string;
+//   Recipe: string;
+//   created_at: string;
+// }
 
 const ProfileHistory = () => {
-  const [history, setHistory] = useState<Recipe[]>([]);
-  const [selectedRecipe, setSelectedRecipe] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  // const [history, setHistory] = useState<Recipe[]>([]);
+  // const [selectedRecipe, setSelectedRecipe] = useState<string | null>(null);
+  // const [loading, setLoading] = useState(true);
 
-  const userId = Number(localStorage.getItem("id")); // Получение ID пользователя из localStorage
+  // const userId = Number(localStorage.getItem("id")); // Получение ID пользователя из localStorage
 
-  useEffect(() => {
-    const fetchHistory = async () => {
-      try {
-        const response = await fetch(
-          `http://localhost:8080/user/${userId}/recipes`
-        );
-  
-        const data = await response.json();
-        if (Array.isArray(data)) {
-          setHistory(data);
-        } else {
-          setHistory([]); // Если данные не массив, сбрасываем историю
-          // console.error("Ожидался массив, но получено:", data);
-        }
-      } catch (error) {
-        console.error(error);
-        setHistory([]); // Сбрасываем историю в случае ошибки
-      } finally {
-        setLoading(false);
-      }
-    };
-  
-    fetchHistory();
-  }, [userId]);
+  // useEffect(() => {
+  //   const fetchHistory = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `http://localhost:8080/user/${userId}/recipes`
+  //       );
 
-  const handleSelectRecipe = (Recipe: string) => {
-    setSelectedRecipe(Recipe);
-  };
+  //       const data = await response.json();
+  //       if (Array.isArray(data)) {
+  //         setHistory(data);
+  //       } else {
+  //         setHistory([]); // Если данные не массив, сбрасываем историю
+  //         // console.error("Ожидался массив, но получено:", data);
+  //       }
+  //     } catch (error) {
+  //       console.error(error);
+  //       setHistory([]); // Сбрасываем историю в случае ошибки
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-  const handleCloseModal = () => {
-    setSelectedRecipe(null);
-  };
+  //   fetchHistory();
+  // }, [userId]);
+
+  // const handleSelectRecipe = (Recipe: string) => {
+  //   setSelectedRecipe(Recipe);
+  // };
+
+  // const handleCloseModal = () => {
+  //   setSelectedRecipe(null);
+  // };
 
   return (
     <div className="flex relative h-full mr-[100px]">
@@ -58,7 +58,7 @@ const ProfileHistory = () => {
           История запросов
         </h3>
         <div className="flex flex-col mt-4  max-h-[450px] overflow-auto scrollbar-custom">
-          {loading ? (
+          {/* {loading ? (
             <p className="text-black text-[15px] font-['ArsenalR']">
               Загрузка...
             </p>
@@ -67,20 +67,20 @@ const ProfileHistory = () => {
               История запросов пуста
             </p>
           ) : (
-            history.map((item, index) => (
-              <div
-                key={index}
-                className="flex text-black text-[15px] font-['ArsenalR'] cursor-pointer  hover:underline"
-                onClick={() => handleSelectRecipe(item.Recipe)}
-              >
-                <p className="text-[#DABF94] font-semibold  ">{item.Ingredients}</p>
-              </div>
-            ))
-          )}
+            history.map((item, index) => ( */}
+          <div
+            // key={index}
+            className="flex text-black text-[15px] font-['ArsenalR'] cursor-pointer  hover:underline"
+          // onClick={() => handleSelectRecipe(item.Recipe)}
+          >
+            <p className="text-[#DABF94] font-semibold  ">фцвфвцвфц</p>
+          </div>
+          {/* ))
+          )} */}
         </div>
       </div>
 
-      {/* Модальное окно */}
+      {/* Модальное окно
       {selectedRecipe && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-h-[500px] max-w-[800px] w-full overflow-y-auto">
@@ -94,7 +94,7 @@ const ProfileHistory = () => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
