@@ -62,7 +62,7 @@ export default function MainAppLayout({
       </button>
 
       {isOpen && (
-        <div className="fixed top-10 right-24 flex justify-around items-center space-x-4 bg-[#DABF94]/40 py-3 pl-6 pr-24 rounded-[30px] z-40">
+        <div className="fixed top-10 right-16 flex justify-around items-center space-x-4 bg-[#DABF94]/40 py-3 pl-6 pr-24 rounded-[30px] z-40 mobile:right-24">
           <Link href="/profile" onClick={handleNavigationClick}>
             <Image src="/profile.png" alt="profile" width={14} height={17} />
           </Link>

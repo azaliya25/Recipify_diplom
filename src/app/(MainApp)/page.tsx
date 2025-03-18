@@ -9,7 +9,7 @@ import Search from "@/components/search/Search.tsx";
 
 export default function Home() {
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section className="flex flex-col justify-center items-center gap-28">
       <Banner />
       <About />
       <Search />

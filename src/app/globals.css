@@ -155,7 +155,7 @@ input[type="search"]::-webkit-search-results-decoration {
   transform-origin: right;
 }
 
-@keyframes typing {
+/* @keyframes typing {
   0% { content: ""; }
   33% { content: "."; }
   66% { content: ".."; }
@@ -170,4 +170,4 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #DABF94;
   border-radius: 50%;
   animation: typing 1.5s infinite steps(1);
-}
+} */
