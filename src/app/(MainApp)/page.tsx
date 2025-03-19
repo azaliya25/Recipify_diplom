@@ -13,6 +13,15 @@ export default function Home() {
       <Banner />
       <About />
       <Search />
+      <div className="fixed inset-0 w-full h-full overflow-hidden">
+        <Image
+          className="w-full h-full object-cover"
+          src="/grid.png"
+          alt=""
+          layout="fill"
+          priority
+        />
+      </div>
     </section>
   );
 }

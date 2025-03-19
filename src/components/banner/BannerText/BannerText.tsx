@@ -7,8 +7,11 @@ const BannerText = () => {
         <div className="max-h-80 relative">
           <div className="absolute hidden mobile-xs:block w-1 bg-[#3F1D11] max-h-full h-full rounded-md"></div>
           <div className="mobile-xs:ml-6">
-            <h1 className="text-8xl font-['ArsenalR'] clamp-banner__down uppercase tracking-widest text-[#F9F1E6] pt-12">
+            {/* <h1 className="text-8xl font-['ArsenalR'] clamp-banner__down uppercase tracking-widest text-[#F9F1E6] pt-12">
               <span className="clamp-banner__up">r</span>ecipify
+            </h1> */}
+            <h1 className="text-8xl font-['ArsenalR'] clamp-banner__down uppercase tracking-widest text-[#F9F1E6] pt-12 pb-4">
+              <span className="clamp-banner__up">Д</span>елико {/* "деликатес" */}
             </h1>
             <div className="flex flex-col ml-1 mobile-xs:ml-2 gap-y-8">
               <p className="text-3xl font-['ArsenalB'] text-[#F9F1E6]">
