@@ -50,36 +50,40 @@ const ProfileUser = () => {
     // };
 
     return (
-        <div className="flex flex-col h-full relative">
-            <div className="flex flex-col ml-[150px] mt-[80px]">
-                <h2 className="text-black text-[35px] font-['ArsenalB']">Личный кабинет</h2>
-                <form
-                    // onSubmit={handleSubmit}
-                    className="flex flex-col justify-center text-[#F9F1E6] max-w-[510px] max-h-[300px] gap-[25px] h-full pt-20"
-                >
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="NAME"
-                        // value={formData.name || ""}
-                        // onChange={handleInputChange}
-                        className="bg-inherit border-b-black border border-x-0 border-t-0 placeholder-black font-['ArsenalR'] text-black focus:border-none"
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="EMAIL"
-                        // value={formData.email || ""}
-                        // onChange={handleInputChange}
-                        className="bg-inherit border-b-black border border-x-0 border-t-0 placeholder-black font-['ArsenalR'] text-black focus:border-none"
-                    />
-                    <input
-                        type="submit"
-                        value="Сохранить"
-                        className="flex justify-center bg-black border-black border rounded-[20px] max-w-[280px] mt-11 py-[5px] px-[40px] text-[#F9F1E6] text-[15px] font-['ArsenalB'] cursor-pointer hover:transition-[15s] hover:bg-[#131313]"
-                    />
-                </form>
+        <div className="flex flex-col h-full relative justify-between sm:min-w-[300px]">
+            <div className="flex flex-col h-full justify-between items-center">
+                <div className="flex flex-col justify-center items-center mt-[40px] ">
+                    <h2 className="text-black text-xs text-2xs text-2sm sm:text-[40px] font-['ArsenalB']">Личный кабинет</h2>
+                    <form
+                        // onSubmit={handleSubmit}
+                        className="flex flex-col justify-center items-center text-[#F9F1E6] max-w-[220px] max-h-[300px] gap-[25px] h-full w-full pt-10"
+                    >
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="NAME"
+                            // value={formData.name || ""}
+                            // onChange={handleInputChange}
+                            className="bg-inherit border-b-black border border-x-0 border-t-0 placeholder-black font-['ArsenalR'] min-w-[220px] text-black focus:border-none"
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="EMAIL"
+                            // value={formData.email || ""}
+                            // onChange={handleInputChange}
+                            className="bg-inherit border-b-black border border-x-0 border-t-0 placeholder-black font-['ArsenalR'] min-w-[220px] text-black focus:border-none"
+                        />
+                        <input
+                            type="submit"
+                            value="РЕДАКТИРОВАТЬ"
+                            className="flex justify-center w-full bg-black border-black border rounded-[20px] max-w-[180px] mt-11 py-[5px] px-[30px] text-[#F9F1E6] text-[15px] font-['ArsenalB'] cursor-pointer hover:transition-[15s] hover:bg-[#131313]"
+                        />
+                    </form>
+                </div>
+                <p className="text-black text-[14px] font-['ArsenalB'] py-3 md:py-0">25.10.2024</p>
             </div>
+            <div className="w-full md:w-[300px] h-1 bg-[#3F1D11] rounded-md mb-[-15px]"></div>
         </div>
     );
 };

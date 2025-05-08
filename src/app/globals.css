@@ -160,3 +160,19 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
   }
 }
+@media (max-width: 640px) {
+  .text-2sm {
+    font-size: 40px;
+  }
+}
+@media (max-width: 446px) {
+  .text-xs {
+    font-size: 30px;
+  }
+}
+@media (max-width: 408px) {
+  .text-2xs {
+    font-size: 30px;
+  }
+}
+

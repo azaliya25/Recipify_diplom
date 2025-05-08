@@ -51,13 +51,13 @@ const ProfileHistory = () => {
   // };
 
   return (
-    <div className="flex relative h-full mr-[100px]">
-      <div className="absolute hidden mobile-xs:block w-1 bg-[#3F1D11] max-h-full h-full rounded-md"></div>
-      <div className="flex flex-col min-w-[300px] w-full pl-20">
-        <h3 className="text-black text-[20px] font-['ArsenalB'] mt-24">
+    <div className="flex relative w-full h-full mr-[100px]">
+      <div className="absolute justify-center hidden md:block w-2 bg-[#3F1D11] max-h-full h-full rounded-md"></div>
+      <div className="flex flex-col w-full md:pl-20">
+        <h3 className="text-black text-[24px] font-['ArsenalB'] mt-16">
           История запросов
         </h3>
-        <div className="flex flex-col mt-4  max-h-[450px] overflow-auto scrollbar-custom">
+        <div className="flex flex-col w-full mt-4 max-h-[450px] gap-3 overflow-auto scrollbar-custom">
           {/* {loading ? (
             <p className="text-black text-[15px] font-['ArsenalR']">
               Загрузка...
@@ -70,10 +70,11 @@ const ProfileHistory = () => {
             history.map((item, index) => ( */}
           <div
             // key={index}
-            className="flex text-black text-[15px] font-['ArsenalR'] cursor-pointer  hover:underline"
+            className="flex w-full items-center gap-4 text-black text-[15px] font-['ArsenalR'] cursor-pointer border-2 border-[#3F1D11] bg-[#3f1d1138] rounded-xl px-4 py-3 overflow-hidden"
           // onClick={() => handleSelectRecipe(item.Recipe)}
           >
-            <p className="text-[#DABF94] font-semibold  ">фцвфвцвфц</p>
+            <p className="text-black font-semibold text-2xl whitespace-nowrap overflow-hidden text-ellipsis flex-1 min-w-0">История запроса...</p>
+            <p className="text-black font-semibold flex-shrink-0">28.02.2025</p>
           </div>
           {/* ))
           )} */}

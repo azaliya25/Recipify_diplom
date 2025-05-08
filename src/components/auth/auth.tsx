@@ -63,7 +63,7 @@ export default function Auth() {
   };
 
   return (
-    <div className="relative flex justify-center h-screen mt-20 ml-[25%]">
+    <div className="relative flex justify-center h-screen w-full mt-20 ml-[25%]">
       <ToastContainer
         position="top-right"
         autoClose={1000}
@@ -78,7 +78,7 @@ export default function Auth() {
       />
       <div
         onClick={toggleForm}
-        className="flex justify-between items-center gap-6 max-h-[50px] w-full min-w-[155px] bg-black border-black border rounded-[20px] py-[8px] px-[15px] text-[#F9F1E6] text-[12px] font-['ArsenalB'] cursor-pointer z-50 mt-[15px] mr-[-80px]"
+        className="flex justify-between items-center gap-6 max-h-[50px] max-w-[155px] w-full mobile-xs:min-w-[155px] bg-black border-black border rounded-[20px] py-[8px] px-[15px] text-[#F9F1E6] text-[12px] font-['ArsenalB'] cursor-pointer z-50 mt-[15px] mr-[-230px] mobile-xs:mr-[-200px] sm:mr-[-160px] md:mr-[-80px]"
       >
         {isLogin ? (
           <>
@@ -111,15 +111,12 @@ export default function Auth() {
 
       <form
         onSubmit={handleSubmit}
-        className={`flex flex-col h-screen blur__banner backdrop-opacity-10 backdrop-invert bg-[#DABF94]/60 rounded-[20px] text-[#F9F1E6] min-w-[480px] max-h-[550px] px-[50px] pt-8 pb-14 gap-64 transition-transform duration-500 ${
-          isLogin ? "-translate-x-[480px]" : ""
-        }`}
+        className={`flex flex-col justify-center h-screen w-full blur__banner backdrop-opacity-10 backdrop-invert bg-[#DABF94]/60 rounded-[20px] text-[#F9F1E6] max-w-[310px] mobile-xs:min-w-[425px] sm:min-w-[350px] md:min-w-[480px] max-h-[550px] px-[15px] mobile-xs:px-[50px] pt-8 pb-14 gap-64 transition-transform duration-500 ${isLogin ? " md:-translate-x-[480px]" : ""}`}
       >
         <div className="flex flex-col items-end w-full h-full">
           <div
-            className={`flex ${
-              isLogin ? "justify-start" : "justify-end"
-            } w-full`}
+            className={`flex ${isLogin ? "justify-start" : "justify-end"
+              } w-full`}
           >
             <Link href="../">
               <Image
@@ -193,7 +190,7 @@ export default function Auth() {
               </a>
             </div>
           )}
-          {isLogin && (
+          {/* {isLogin && (
             <div className="flex items-center justify-end w-full mt-[40px] mb-[40px]">
               <a
                 href="#"
@@ -202,7 +199,7 @@ export default function Auth() {
                 забыли пароль?
               </a>
             </div>
-          )}
+          )} */}
 
           <div className="flex justify-center items-end w-full h-full">
             <input
